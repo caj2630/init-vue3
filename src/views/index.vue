@@ -1,6 +1,5 @@
 <template>
   <div>views</div>
-  {{ state }}
 </template>
 
 <script>
