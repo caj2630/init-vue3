@@ -1,0 +1,82 @@
+{
+  "name": "init-vue3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack",
+    "start": "webpack serve --progress --hot",
+    "check-types": "tsc --watch",
+    "lint": "eslint --ext .ts,.tsx,.vue,.js --fix ./src"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.16.5",
+    "@babel/plugin-proposal-class-properties": "^7.16.5",
+    "@babel/plugin-proposal-object-rest-spread": "^7.16.5",
+    "@babel/plugin-transform-runtime": "^7.16.5",
+    "@babel/plugin-transform-typescript": "^7.16.1",
+    "@babel/preset-env": "^7.16.5",
+    "@babel/preset-typescript": "^7.16.5",
+    "@babel/runtime": "^7.0.0-beta.46",
+    "@commitlint/cli": "^16.0.1",
+    "@commitlint/config-conventional": "^16.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.8.1",
+    "@typescript-eslint/parser": "^5.8.1",
+    "@vue/compiler-sfc": "^3.0.11",
+    "@vue/eslint-config-prettier": "^7.0.0",
+    "@vue/eslint-config-typescript": "^10.0.0",
+    "babel-loader": "^8.2.3",
+    "css-loader": "^6.5.1",
+    "eslint": "^7.32.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.2.0",
+    "eslint-plugin-vue": "^8.2.0",
+    "eslint-webpack-plugin": "^3.1.1",
+    "fork-ts-checker-webpack-plugin": "^6.5.0",
+    "html-webpack-plugin": "^5.5.0",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.1.4",
+    "lodash": "^4.17.21",
+    "mini-css-extract-plugin": "^2.4.5",
+    "prettier": "^2.5.1",
+    "prettier-eslint": "^13.0.0",
+    "sass": "^1.45.1",
+    "sass-loader": "^12.4.0",
+    "style-loader": "^3.3.1",
+    "ts-loader": "^9.2.6",
+    "vue-eslint-parser": "^8.0.1",
+    "vue-loader": "^16.2.0",
+    "webpack": "^5.65.0",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.7.0",
+    "webpack-merge": "^5.8.0",
+    "yz-dynamic-form": "^0.1.4"
+  },
+  "dependencies": {
+    "@babel/runtime-corejs3": "^7.16.5",
+    "core-js": "^3.20.1",
+    "typescript": "^4.5.4",
+    "vue": "^3.2.26",
+    "vue-router": "^4.0.12",
+    "vuex": "^4.0.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+ "lint-staged": {
+   "*.{js,vue,ts}": "npm run lint"
+ },
+  "config": {
+    "commitizen": {
+      "path": "cz-customizable"
+    }
+  }
+}

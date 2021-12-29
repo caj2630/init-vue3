@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "module": "esnext",
+    "target": "esnext",
+    "sourceMap": true,
+    "allowJs": true,
+    "allowSyntheticDefaultImports" : true,
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "jsx": "preserve",
+    "types": ["node"],
+    "baseUrl": ".",
+    "paths": { // 配置paths映射模块路径
+      "@/*": [
+        "src/*"
+      ]
+    }
+  },
+  "exclude": [
+    "node_modules"
+  ],
+
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue",
+  ]
+}
