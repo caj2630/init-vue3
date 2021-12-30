@@ -1,10 +1,17 @@
 <template>
   <div>views</div>
+  <button
+    type="button"
+    @click="clickHandler"
+  >
+    button
+  </button>
 </template>
 
 <script>
 import { useRouter, useRoute } from 'vue-router'
 import { useStore } from 'vuex'
+import { onMounted } from 'vue'
 
 export default {
   name: 'IndexPage',
@@ -15,10 +22,21 @@ export default {
 
     const { state, getters, commit, dispatch } = useStore()
 
-    return {
-      state
+    onMounted(() => {
+      console.log('Component is mounted!')
+    })
+
+    function clickHandler(){
+      console.log(11111)
     }
-  }
+
+    return {
+      state,
+      clickHandler
+    }
+  },
+
+
 }
 </script>
 
