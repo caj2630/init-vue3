@@ -8,7 +8,8 @@
     "start": "webpack serve --progress --hot",
     "check-types": "tsc --watch",
     "lint": "eslint --ext .ts,.tsx,.vue,.js --fix ./src",
-    "commit": "cz"
+    "commit": "cz",
+    "cypress:open": "cypress open"
   },
   "keywords": [],
   "author": "",
@@ -32,6 +33,7 @@
     "babel-loader": "^8.2.3",
     "commitizen": "^4.2.4",
     "css-loader": "^6.5.1",
+    "cypress": "^9.2.0",
     "cz-conventional-changelog": "^3.3.0",
     "cz-customizable": "^6.3.0",
     "eslint": "^7.32.0",
