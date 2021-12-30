@@ -16,6 +16,8 @@ script:
 node_js:
   - node
   - 14
-cache:
-  directories:
-    - node_modules
+cache: npm
+env:
+  - DB=postgres
+  - SH=bash
+  - PACKAGE_VERSION="1.0.*"
