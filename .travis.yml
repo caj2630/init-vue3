@@ -1,3 +1,18 @@
 language: node_js
+git:
+  depth: 1
+  quiet: true
+  submodules: false
+  clone: false
+  symlinks: true
+  autocrlf: input
+branches:
+  only:
+    -master
+install:
+  - npm install
+script:
+  - npm run build
 node_js:
+  - node
   - 14
