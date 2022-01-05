@@ -4,7 +4,8 @@ module.exports = {
     node: true,
     browser: true,
     commonjs: true,
-    amd: true
+    amd: true,
+    "cypress/globals": true
   },
   extends: [
     "eslint:recommended",
@@ -13,7 +14,8 @@ module.exports = {
      "plugin:vue/vue3-essential",
      "@vue/typescript/recommended",
      "plugin:@typescript-eslint/eslint-recommended",
-     "plugin:@typescript-eslint/recommended"
+     "plugin:@typescript-eslint/recommended",
+     "plugin:cypress/recommended"
   ],
   parser: 'vue-eslint-parser',
   parserOptions: {
@@ -21,7 +23,7 @@ module.exports = {
     parser: '@typescript-eslint/parser',
     sourceType: 'module'
   },
-  plugins: ['vue', '@typescript-eslint'],
+  plugins: ['vue', '@typescript-eslint', "cypress"],
 
   globals: {
     process: true
@@ -142,6 +144,12 @@ module.exports = {
         allowModifiers: false
       }
     ],
-    '@typescript-eslint/no-var-requires': 0
+    '@typescript-eslint/no-var-requires': 0,
+    "cypress/no-assigning-return-values": "error",
+    "cypress/no-unnecessary-waiting": "error",
+    "cypress/assertion-before-screenshot": "warn",
+    "cypress/no-force": "warn",
+    "cypress/no-async-tests": "error",
+    "cypress/no-pause": "error"
   }
 };
