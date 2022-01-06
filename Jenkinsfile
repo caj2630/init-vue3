@@ -1,17 +1,24 @@
 pipeline {
     agent any
 
+    environment {
+        REPOSITORY='https://github.com/caj2630/init-vue3.git'
+    }
     stages {
-        stage('Build') {
+        stage('pull') {
             steps {
-                bat 'set'
+                git '${REPOSITORY}'
             }
         }
-    }
-
-    post {
-        always {
-            junit 'build/reports/**/*.xml'
+        stage('check') {
+            steps {
+                echo 'check'
+            }
+        }
+        stage('build') {
+            steps {
+                echo 'build'
+            }
         }
     }
 }
